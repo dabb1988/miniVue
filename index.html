@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<span class="sdfds" v-text="message"></span><br/>
+			{{message}} <br/>
+			<input type="text" v-model="message" />
+			<div v-text="username"></div>
+		</div>
+		<script src="js/TemplateCompiler.js"></script>
+		<script src="js/mvvm.js"></script>
+		<script>
+			var vm = new MVVM({
+				// 挂载视图
+				el: '#app',
+				// 定义数据
+				data: {
+					message: '今天是五一',
+					username: '刘博'
+				}
+			})
+		</script>
+	</body>
+</html>
